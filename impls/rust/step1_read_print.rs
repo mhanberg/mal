@@ -1,19 +1,14 @@
 use std::io::{self, Write};
 
-fn read(arg: String) -> String {
-    arg
-}
+use crate::printer;
+use crate::reader;
 
 fn eval(arg: String) -> String {
     arg
 }
 
-fn print(arg: String) -> String {
-    arg
-}
-
 fn rep(arg: String) -> String {
-    print(eval(read(arg)))
+    printer::print_str(eval(reader::read_str(arg)))
 }
 
 fn main() {
